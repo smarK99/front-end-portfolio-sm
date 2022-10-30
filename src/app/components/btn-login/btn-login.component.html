@@ -1,0 +1,6 @@
+<li class="nav-item">
+  <button type="button" class="btn btn-outline-success" *ngIf="!isLogged"><a href="/login">Login</a></button>
+  <button type="button" class="btn btn-outline-success btn-logout" (click)="onLogout()" *ngIf="isLogged">Logout</button>
+</li>
+
+

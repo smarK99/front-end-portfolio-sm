@@ -1,0 +1,17 @@
+#tags > .nav > .nav-item{
+    border: 1px solid #5f5f5f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#tags > .nav > .nav-item > .nav-link:hover{
+    background-color: aliceblue;
+    color: #1c1d1f;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 600ms 50ms;
+}
+
+#tags > .nav > .nav-item > .nav-link{
+    color: aliceblue;
+}

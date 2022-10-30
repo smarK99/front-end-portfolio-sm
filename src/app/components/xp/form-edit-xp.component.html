@@ -1,0 +1,17 @@
+<section  class="vh-100" *ngIf="xp">
+    <div class="container py-5 h-100">
+        <div class="row">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreExp">Nombre experiencia  y años transcurridos</label>
+                    <input type="text" class="form-control" name="nombreExp" id="nombreExp" [(ngModel)] = "xp.nombreExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionExp">Descripcion de la experiencia</label>
+                    <input type="text" class="form-control" name="descripcionExp" id="descripcionExp" [(ngModel)] = "xp.descripcionExp" required>
+                </div>
+                <button class="btn btn-primary">Modificar</button>
+            </form>
+        </div>
+    </div>
+</section>

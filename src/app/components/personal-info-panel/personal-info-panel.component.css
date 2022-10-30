@@ -1,0 +1,21 @@
+#profileInfo{
+    top: -90px;
+    width: 100%;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    position: relative;
+}
+
+.list-group-item{
+    background-color: transparent;
+    color:aliceblue;    
+}
+
+.list-info{
+    list-style: none;
+}
+
+.item-list{
+    padding: 5px;
+}

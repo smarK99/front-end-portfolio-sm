@@ -1,0 +1,15 @@
+#projects{
+    padding: 20px;
+    text-align: justify;
+    border:#000 solid 1px;
+    border-radius: 20px;
+    background-color: #2e3033;      
+}
+
+.item{
+    border:#000 1px solid;
+    width: auto;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 15px;
+}

@@ -1,0 +1,29 @@
+#skills{
+    padding: 20px;
+    text-align: justify;
+    border:#000 solid 1px;
+    border-radius: 20px; 
+    background-color: #2e3033; 
+}
+
+.circle-group{
+    display: flex;
+    flex-flow: wrap;    
+    flex-direction: row;
+}
+
+.circle{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.buttons > a{
+    margin: 5px;
+}

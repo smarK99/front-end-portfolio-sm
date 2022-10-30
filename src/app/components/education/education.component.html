@@ -1,0 +1,14 @@
+<div class="col-md-11 col-lg-9 section" id="education">
+    <h2>Education <a href="/create-educacion" *ngIf="isLogged"><i class="bi bi-plus-circle-dotted"></i></a></h2>
+    <hr/>
+    <ul>
+        <li *ngFor="let edu of edu">
+            <h3>{{edu.nombreEdu}}
+                <a href="/update-educacion/{{this.edu.idEducacion}}" *ngIf="isLogged"><i class="bi bi-pen"></i></a>
+                <a (click)="delete(this.edu.idEducacion)" *ngIf="isLogged"><i class="bi bi-trash3"></i></a>
+            </h3>
+            <p>{{edu.descripcionEdu}}</p>
+        </li>
+    </ul>
+</div>
+

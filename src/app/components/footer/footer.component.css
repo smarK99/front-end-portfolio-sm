@@ -1,0 +1,21 @@
+#footer{
+    background-color: #1c1d1f;
+    border-top: solid 1px #2e3033;
+    height: 120px;
+    /* width: 100%; */
+    color: aliceblue;
+    padding: 10px; 
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer{
+    background-color: #1c1d1f; 
+}
+
+#social-footer{
+    display: flex;
+    flex-direction: row;
+}

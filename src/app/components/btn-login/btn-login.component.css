@@ -1,0 +1,30 @@
+.btn{
+    transition: 600ms 50ms;
+}
+
+.btn-outline-success {
+    color: #00ff88;
+    border-color: #00ff88;
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    background-color: #198754;
+    border-color: #198754;
+}
+
+a{
+    color:#00ff88;
+    text-decoration: none;
+}
+
+.btn-logout{
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn-logout:hover {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}

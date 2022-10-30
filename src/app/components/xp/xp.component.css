@@ -1,0 +1,18 @@
+#xp{
+    padding: 20px;
+    border:#000 solid 1px;
+    border-radius: 20px;
+    background-color: #2e3033;
+}
+
+ul{
+    list-style: none;
+}
+
+.bi-trash3, .bi-pen, .bi-plus-circle-dotted{
+    font-size: 22px;
+}
+
+a{
+    cursor: pointer;
+}

@@ -1,0 +1,16 @@
+<!--Experience-->
+<div class="col-md-11 col-lg-9 section" id="xp">
+    <h2>Experience <a href="/create-xp" *ngIf="isLogged"><i class="bi bi-plus-circle-dotted"></i></a></h2>
+    <hr/> 
+    <ul>
+        <li *ngFor="let xp of xp">
+            <h3>{{xp.nombreExp}}
+                <a href="/update-xp/{{this.xp.idExp}}" *ngIf="isLogged"><i class="bi bi-pen"></i></a>
+                <a (click)="delete(this.xp.idExp)" *ngIf="isLogged"><i class="bi bi-trash3"></i></a>
+            </h3>
+            <p>{{xp.descripcionExp}}</p>
+        </li>
+    </ul>
+</div>
+
+ 

@@ -1,0 +1,32 @@
+<!--Hard/Soft Skills-->
+<div class="col-md-11 col-lg-9 section" id="skills">
+    <div class="col">
+        <h2>Hard & Soft skills <a href="/create-skill" *ngIf="isLogged"><i class="bi bi-plus-circle-dotted"></i></a></h2>
+        <hr/>
+            <div class="circle-group">
+                <div class="circle" *ngFor="let skill of skill">
+                    <circle-progress 
+                        [percent]="(skill.porcentaje)"
+                        [radius]="100"
+                        [imageSrc]="''"
+                        [showImage]="false"
+                        [title]="(skill.nombreSkill)"
+                        [outerStrokeWidth]="16"
+                        [innerStrokeWidth]="6"
+                        [outerStrokeColor]="'#02da09'"
+                        [innerStrokeColor]="'#C7E596'"
+                        [animation]="true"
+                        [showUnits]="false"
+                        [showSubtitle]="false"
+                        [animationDuration]="700"
+                        [titleColor]="'aliceblue'"
+                        [subtitleColor]="'aliceblue'"
+                    ></circle-progress>
+                    <div class="buttons">
+                        <a href="/update-skill/{{this.skill.idSkill}}" *ngIf="isLogged"><i class="bi bi-pen"></i></a>
+                        <a (click)="delete(this.skill.idSkill)" *ngIf="isLogged"><i class="bi bi-trash3"></i></a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

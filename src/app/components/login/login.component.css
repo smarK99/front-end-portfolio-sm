@@ -1,0 +1,20 @@
+body{
+    background: #1c1d1f;/*#2e3033*/
+}
+.card{
+    background-color: #2e3033;
+}
+
+.btn{
+    margin: 10px;
+}
+.gradient-custom {
+    
+    background: #1c1d1f;
+    /* background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)) */
+}
+

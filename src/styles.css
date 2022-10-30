@@ -1,1 +1,93 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/*General Styles*/
+body{
+    /* font-family: Arial, Helvetica, sans-serif; */
+     background: #1c1d1f; /* linear-gradient(#2e3033, #1c1d1f, #000000); */
+     color: aliceblue;
+}
+
+/*Icons*/
+.bi{
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.bi:hover{
+    color: #666666;
+    transition: 400ms 30ms;
+}
+
+/*Media Queries*/
+
+@media (min-width: 768px){
+
+    /* .socialMedia-bar{
+        margin-right: 10px;
+        top: 0;
+        right: 0;
+        position: absolute;
+    } */
+
+    .navbar{
+        padding: 0px;
+    }
+
+    nav > .container-fluid{
+        padding: 0px;
+    }
+
+    .socialMedia-bar{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .btn{
+        margin: 10px 0px 10px 10px;
+    }
+
+    .logoBar{
+        font-size: 20px;
+    }
+
+    #banner{
+        border: 1px solid #1c1d1f;
+        /* margin: 0 50px; */
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;    
+    }
+
+    #banner > img{
+        /* z-index: -1; */
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; 
+        width: 100%;
+        position: relative;
+    }
+
+    .profile{
+        margin: auto;
+    }
+
+    #tags{
+        margin: auto;
+    }
+
+    .section{
+        margin: 10px auto;
+    }
+
+}
+
+@media (max-width: 768px){
+    
+    .nav-item > .disabled{
+        font-size: 0px;
+    }
+
+    .section{
+        margin: 10px;
+    }
+}
