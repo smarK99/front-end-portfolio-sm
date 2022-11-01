@@ -9,6 +9,14 @@ body{
      color: aliceblue;
 }
 
+ul{
+    list-style: none;
+}
+
+a{
+    cursor: pointer;
+}
+
 /*Icons*/
 .bi{
     font-size: 30px;

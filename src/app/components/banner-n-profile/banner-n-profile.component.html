@@ -1,15 +1,13 @@
  <!--Banner & Profile-->
  <div class="profile col-md-11 col-lg-9">
     <!--Banner-->
-    <div id="banner">
-        <img src="../../../assets/bannerLogo1.jpg" alt="Banner image">
-    </div>
-    <div>
-        <a href="/update-persona/1" *ngIf="isLogged"><i class="bi bi-pencil-fill"></i></a>
+    <div id="banner" style="background-image: url({{persona.imgBanner}});">
+        <a href="/update-persona/1" *ngIf="isLogged"><i class="bi bi-pencil"></i></a>
+        <!-- <img src="../../../assets/bannerLogo1.jpg" alt="Banner image"> -->
     </div>
     <!--Profile Photo-->
     <div id="profilePicture">
-        <img src="../../../assets/profilePhoto.jpeg" alt="Profile picture" id="pp">
+        <img src="{{persona.imgProfile}}" alt="Profile picture" id="pp">
     </div>
 </div>
 <!-- ../../../assets/profilePhoto.jpeg 
