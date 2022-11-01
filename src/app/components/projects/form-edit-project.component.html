@@ -1,0 +1,21 @@
+<section  class="vh-100" *ngIf="proyecto">
+    <div class="container py-5 h-100">
+        <div class="row">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre de la institución y años transcurridos</label>
+                    <input type="text" class="form-control" name="nombreProyecto" id="nombreProyecto" [(ngModel)] = "proyecto.nombreProyecto" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionProy">Descripcion de estudios, titulo, etc</label>
+                    <input type="text" class="form-control" name="descripcionProy" id="descripcionProy" [(ngModel)] = "proyecto.descripcionProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="urlProy">Url del proyecto</label>
+                    <input type="text" class="form-control" name="urlProy" id="urlProy" [(ngModel)] = "proyecto.urlProy" required>
+                </div>
+                <button class="btn btn-primary">Modificar</button>
+            </form>
+        </div>
+    </div>
+</section>

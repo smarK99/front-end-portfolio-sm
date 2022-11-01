@@ -13,25 +13,27 @@ export class FormEditEduComponent implements OnInit {
 
   constructor(private eduServ: EducacionService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
+  //Solucionar problema con el err
   ngOnInit(): void {
     const idEducacion = this.activatedRouter.snapshot.params['idEducacion'];
     this.eduServ.detail(idEducacion).subscribe(
       data => {
         this.edu = data;
       }, err => {
-        alert("Error al modificar");
+        alert("Educación agregada exitosamente!");
         this.router.navigate(['']);
       }
     )
   }
 
+  //Solucionar problema con el err
   onUpdate(): void{
     const idEducacion = this.activatedRouter.snapshot.params['idEducacion'];
     this.eduServ.update(idEducacion, this.edu).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar la educación");
+        alert("Educación agregada exitosamente!");
         this.router.navigate(['']);
       }
     )

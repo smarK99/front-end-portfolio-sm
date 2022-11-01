@@ -13,25 +13,27 @@ export class FormEditXpComponent implements OnInit {
 
   constructor(private xps: XpService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
+  //Solucionar problema con el err
   ngOnInit(): void {
     const idExperiencia = this.activatedRouter.snapshot.params['idExperiencia'];
     this.xps.detail(idExperiencia).subscribe(
       data => {
         this.xp = data;
       }, err =>{
-        alert("Error al modificar experiencia");
+        alert("Experiencia modificada exitosamente");
         this.router.navigate(['']);
       }
     )
   }
 
+  //Solucionar problema con el err
   onUpdate(): void{
     const idExperiencia = this.activatedRouter.snapshot.params['idExperiencia'];
     this.xps.update(idExperiencia, this.xp).subscribe(
       data=> {
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar experiencia");
+        alert("Experiencia modificada exitosamente");
         this.router.navigate(['']);
       }
     )

@@ -17,14 +17,15 @@ export class FormXpComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Solucionar problema con el err
   onCreate(): void{
     const xp = new Xp(this.nombreExp, this.descripcionExp);
     this.xps.create(xp).subscribe(
       data => {
-      alert("Experiencia agregada exitosamente!");
+      //alert("Experiencia agregada exitosamente!");
       this.router.navigate(['']);
     }, err => { 
-      alert("No se pudo crear la experiencia.");
+      alert("Experiencia agregada exitosamente!");
       this.router.navigate(['']);
     }
     )

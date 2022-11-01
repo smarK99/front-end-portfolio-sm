@@ -1,28 +1,16 @@
 <!--Projects-->
 <div class="col-md-11 col-lg-9 section" id="projects">
-    
-    <h2>Projects</h2>
+    <h2>Projects <a href="/create-project" *ngIf="isLogged"><i class="bi bi-plus-circle-dotted"></i></a></h2>
     <hr/>
-        <div class="item">
-            <h3>Portfolio</h3>
-            <p>Estoy haciendo este portfolio zarpadoo!</p>
-            <p>(imagen)</p>
-        </div>
-        <div class="item">
-            <h3>Proyecto 2</h3>
-            <p>(Descripcion)</p>
-            <p>(imagen)</p>
-        </div>
-        <div class="item">
-            <h3>Proyecto 3</h3>
-            <p>(Descripcion)</p>
-            <p>(imagen)</p>
-        </div>
-    
-    <!-- <p>This.portfolioLorem ipsum dolor sit amet consectetur adipisicing elit. Labore quaerat ullam architecto asperiores
-        incidunt, quibusdam amet illo repellat sint! Assumenda, doloribus. Error recusandae omnis quas.
-        Repellendus minus temporibus optio aspernatur.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quibusdam, reprehenderit rem ex minima
-        voluptatum tenetur atque consequatur. Tenetur atque nihil accusantium hic. Nisi fugit aperiam, numquam
-        illo nulla provident</p> -->
+    <ul>
+        <li *ngFor="let proyecto of proyecto">
+            <h3>{{proyecto.nombreProyecto}} 
+                <a href="/update-project/{{this.proyecto.idProyecto}}" *ngIf="isLogged"><i class="bi bi-pen"></i></a>
+                <a (click)="delete(this.proyecto.idProyecto)" *ngIf="isLogged"><i class="bi bi-trash3"></i></a>
+            </h3>
+            <p>{{proyecto.descripcionProy}}</p>
+            <a href="{{this.proyecto.urlProy}}" target="_blank">Url del proyecto</a>
+            <p></p>
+        </li>
+    </ul>
 </div>

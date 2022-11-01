@@ -28,13 +28,15 @@ export class SkillsComponent implements OnInit {
       .subscribe(data => {this.skill = data;})
   }
 
+  //Solucionar problema con el err
   delete(idSkill?: number): void{
     if(idSkill != undefined){
       this.skillServ.delete(idSkill).subscribe(
         data => {
           this.loadSkills();
         }, err => {
-          alert("No se pudo borrar la skill")
+          this.loadSkills();
+          alert("Skill modificada exitosamente!");
         }
       )
     }

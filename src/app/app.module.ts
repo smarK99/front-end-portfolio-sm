@@ -32,6 +32,12 @@ import { FormNewEduComponent } from './components/education/form-new-edu.compone
 import { FormEditEduComponent } from './components/education/form-edit-edu.component';
 import { FormNewSkillComponent } from './components/skills/form-new-skill.component';
 import { FormEditSkillComponent } from './components/skills/form-edit-skill.component';
+import { FormNewProjectComponent } from './components/projects/form-new-project.component';
+import { FormEditProjectComponent } from './components/projects/form-edit-project.component';
+import { FormEditPersonaComponent } from './components/form-edit-persona/form-edit-persona.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -59,7 +65,10 @@ import { FormEditSkillComponent } from './components/skills/form-edit-skill.comp
     FormNewEduComponent,
     FormEditEduComponent,
     FormNewSkillComponent,
-    FormEditSkillComponent
+    FormEditSkillComponent,
+    FormNewProjectComponent,
+    FormEditProjectComponent,
+    FormEditPersonaComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +76,9 @@ import { FormEditSkillComponent } from './components/skills/form-edit-skill.comp
     NgCircleProgressModule.forRoot({}),//Para poner parametros por defecto
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider

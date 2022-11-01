@@ -1,22 +1,24 @@
 //Esta carpeta model representa el modelo que tenemos en la base de datos y en el back
 export class Persona{
     idPersona?: number;
-    nombre: string;
-    apellido: string;
-    titulo: string;
-    ciudad: string;
-    img: string;
+    name: string;
+    surname: string;
+    title: string;
+    city: string;
+    imgProfile: string;
+    imgBanner: string;
     email: string;
-    aboutMe: string;
+    aboutme: string;
     
-    constructor(nombre:string, apellido:string, titulo:string, ciudad:string, img:string, email:string, aboutMe:string){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.titulo = titulo;
-        this.ciudad = ciudad;
-        this.img = img;
+    constructor(name:string, surname:string, title:string, city:string, imgProfile:string, imgBanner:string, email:string, aboutme:string){
+        this.name = name;
+        this.surname = surname;
+        this.title = title;
+        this.city = city;
+        this.imgProfile = imgProfile;
+        this.imgBanner = imgBanner;
         this.email = email;
-        this.aboutMe = aboutMe;
+        this.aboutme = aboutme;
     }
 
 }

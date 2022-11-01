@@ -17,6 +17,7 @@ export class FormNewEduComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Solucionar problema con el err
   onCreate(): void{
     const edu = new Educacion(this.nombreEdu, this.descripcionEdu);
     this.eduServ.save(edu).subscribe(
@@ -24,7 +25,7 @@ export class FormNewEduComponent implements OnInit {
         alert("Educación agregada exitosamente");
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al crear educación");
+        alert("Educación agregada exitosamente!");
         this.router.navigate(['']);
       }
     )

@@ -2,11 +2,18 @@
  <div class="profile col-md-11 col-lg-9">
     <!--Banner-->
     <div id="banner">
-        <i class="bi bi-pencil-fill"></i>
-        <!-- <img src="../../../assets/bannerLogo1.jpg" alt="Banner image" class="img-fluid"> -->
+        <img src="../../../assets/bannerLogo1.jpg" alt="Banner image">
+    </div>
+    <div>
+        <a href="/update-persona/1" *ngIf="isLogged"><i class="bi bi-pencil-fill"></i></a>
     </div>
     <!--Profile Photo-->
     <div id="profilePicture">
-        <img src="../../../assets/profilePhoto.jpeg" alt="Profile picture" id="pp">
+        <img src="{{persona.imgProfile}}" alt="Profile picture" id="pp">
     </div>
 </div>
+<!-- ../../../assets/profilePhoto.jpeg 
+
+../../../assets/bannerLogo1.jpg
+
+{{persona.imgBanner}}-->

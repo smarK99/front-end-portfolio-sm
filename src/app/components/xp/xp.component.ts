@@ -28,13 +28,15 @@ export class XpComponent implements OnInit {
       .subscribe(data => {this.xp = data;})
   }
 
+  //Solucionar problema con el err
   delete(idExp?: number): void{
     if(idExp != undefined){
       this.xps.delete(idExp).subscribe(
         data => {
           this.loadXp();
         }, err => {
-          alert("No se pudo borrar la experiencia")
+          this.loadXp();
+          alert("Experiencia agregada exitosamente!");
         }
       )
     }

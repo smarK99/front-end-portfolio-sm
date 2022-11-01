@@ -1,14 +1,14 @@
 <div class="col-md-11 col-lg-9" id="profileInfo">
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
-            <h1>{{ getFullName() }}</h1>
+            <h1>{{ persona.name }} {{ persona.surname }}</h1>
         </li>
         <li class="list-group-item">
-            <h6>{{ getTitle() }}</h6>
+            <h6>{{ persona.title }}</h6>
         </li>
         <li class="list-group-item">
-            <h6>{{ getAddress() }}</h6>
+            <h6>{{ persona.city }}</h6>
         </li>
-        <li class="list-group-item item-link"><a href="#">{{ getContact() }}</a></li>
+        <li class="list-group-item item-link"><a href="#">{{ persona.email }}</a></li>
     </ul>
 </div>

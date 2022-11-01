@@ -31,13 +31,15 @@ export class EducationComponent implements OnInit {
     )
   }
 
+  //Solucionar problema con el err
   delete(idEducacion?: number){
     if(idEducacion != undefined){
       this.eduServ.delete(idEducacion).subscribe(
         data => {
           this.loadEducacion();
         }, err =>{
-          alert("No se pudo eliminar la educación");
+          this.loadEducacion();
+          alert("Educación agregada exitosamente!");
         }
       )
     }

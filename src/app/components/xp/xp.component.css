@@ -9,10 +9,6 @@ ul{
     list-style: none;
 }
 
-.bi-trash3, .bi-pen, .bi-plus-circle-dotted{
-    font-size: 22px;
-}
-
 a{
     cursor: pointer;
 }

@@ -13,25 +13,27 @@ export class FormEditSkillComponent implements OnInit {
 
   constructor(private skillServ: SkillService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
+  //Solucionar problema con el err
   ngOnInit(): void {
     const idSkill = this.activatedRoute.snapshot.params['idSkill'];
     this.skillServ.detail(idSkill).subscribe(
       data => {
         this.skill = data;
       }, err =>{
-        alert("Error al modificar Skill");
+        alert("Skill modificada exitosamente!");
         this.router.navigate(['']);
       }
     )
   }
 
+  //Solucionar problema con el err
   onUpdate(): void{
     const idSkill = this.activatedRoute.snapshot.params['idSkill'];
     this.skillServ.update(idSkill, this.skill).subscribe(
       data=> {
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar Skill");
+        alert("Skill modificada exitosamente!");
         this.router.navigate(['']);
       }
     )

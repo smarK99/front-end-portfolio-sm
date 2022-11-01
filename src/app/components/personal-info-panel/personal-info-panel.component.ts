@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-personal-info-panel',
@@ -6,34 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal-info-panel.component.css']
 })
 export class PersonalInfoPanelComponent implements OnInit {
+  persona: Persona = new Persona("", "", "", "", "", "", "", "");
 
-  private fullName:string = "Santiago Marquez";
-  private title:string = "Full Stack Developer Jr.";
-  private address:string = "Mendoza, Argentina";
-  private contact:string = "marquezDevs@gmail.com";
+  constructor(public personaService: PersonaService, private token: TokenService) { }
+  isLogged = false;
 
-  constructor() { 
-
-  }
-
+  //Tareas de inicializacion(apenas se carga la pagina)
   ngOnInit(): void {
-
+    this.loadPersona();
+    if(this.token.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
   }
 
-  public getFullName():string{
-    return this.fullName;
-  }
-
-  public getTitle():string{
-    return this.title;
-  }
-
-  public getAddress():string{
-    return this.address;
-  }
-
-  public getContact():string{
-    return this.contact;
+  loadPersona(){
+    //Con el suscribe detecto cada vez que el observable hace algo 
+    this.personaService.detail(1).subscribe(data => {this.persona = data})
   }
 
 

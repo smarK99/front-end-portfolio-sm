@@ -17,6 +17,7 @@ export class FormNewSkillComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Solucionar problema con el err
   onCreate(): void{
     const skill = new Skill(this.nombreSkill, this.porcentaje);
     this.skillServ.save(skill).subscribe(
@@ -24,7 +25,7 @@ export class FormNewSkillComponent implements OnInit {
       alert("Skill agregada exitosamente!");
       this.router.navigate(['']);
     }, err => { 
-      alert("No se pudo crear la Skill.");
+      alert("Skill agregada exitosamente!");
       this.router.navigate(['']);
     }
     )

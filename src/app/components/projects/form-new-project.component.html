@@ -1,0 +1,21 @@
+<section  class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre del Proyecto</label>
+                    <input type="text" class="form-control" name="nombreProyecto" id="nombreProyecto" [(ngModel)] = "nombreProyecto" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionProy">Descripcion</label>
+                    <input type="text" class="form-control" name="descripcionProy" id="descripcionProy" [(ngModel)] = "descripcionProy" required>
+                </div>
+                <div class="form-group">
+                    <label for="urlProy">Url del proyecto</label>
+                    <input type="text" class="form-control" name="urlProy" id="urlProy" [(ngModel)] = "urlProy" required>
+                </div>
+                <button class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+</section>
